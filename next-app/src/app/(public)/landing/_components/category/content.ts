@@ -1,20 +1,20 @@
-interface CategoryContentProps {
+type CategoryContentProps = {
   title: string;
   description: string;
   image: string;
   link: string;
   categories: Category[];
-}
+};
 
-interface Category {
+type Category = {
   name: string;
   courses: CourseCardProps[];
-}
+};
 
-interface CourseCardProps {
+type CourseCardProps = {
   category: Category;
   name: string;
   description: string;
   image: string;
   link: string;
-}
+};
