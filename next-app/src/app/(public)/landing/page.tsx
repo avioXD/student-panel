@@ -5,8 +5,8 @@ import { getDataFromToken } from "@/helper/getDataFromToken";
 import { useUserStore } from "@/store/user/userStore";
 import { useEffect } from "react";
 import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
-import Hero from "./_components/hero/Section";
-import Category from "./_components/category/Section";
+import HeroSection from "./_components/hero/HeroSection";
+import CategorySection from "./_components/category/CategorySection";
 
 export default function Page() {
   const { setUser, user } = useUserStore();
@@ -22,8 +22,8 @@ export default function Page() {
   return (
     <div>
       <MaxWidthWrapper>
-        <Hero />
-        <Category />
+        <HeroSection />
+        <CategorySection />
       </MaxWidthWrapper>
     </div>
   );
