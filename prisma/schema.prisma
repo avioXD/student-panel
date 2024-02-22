@@ -1,0 +1,232 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Course {
+  ID                  Int                @id @default(autoincrement())
+  Title               String             @db.VarChar(100)
+  Description         String             @db.VarChar()
+  Duration            Float
+  Diffculty           String             @db.VarChar()
+  Rating              Decimal
+  CreatedDate         DateTime
+  ModifiedDate        DateTime
+  SLAG                String             @db.VarChar()
+  Chapters            Chapter[]
+  Certificate         Certificate?       @relation(fields: [certificateID], references: [ID])
+  certificateID       Int?
+  Domain              Domain?            @relation(fields: [domainID], references: [ID])
+  domainID            Int?
+  SubscriptionsPlan   SubscriptionsPlan? @relation(fields: [subscriptionsPlanID], references: [ID])
+  subscriptionsPlanID Int?
+}
+
+model Purchasehistory {
+  ID                  Int                @id @default(autoincrement())
+  PurchaseDate        DateTime
+  Status              String             @db.VarChar()
+  Payment             Payment            @relation(fields: [paymentID], references: [ID])
+  paymentID           Int
+  Subscriber          Subscriber?        @relation(fields: [subscriberID], references: [ID])
+  subscriberID        Int?
+  SubscriptionsPlan   SubscriptionsPlan? @relation(fields: [subscriptionsPlanID], references: [ID])
+  subscriptionsPlanID Int?
+}
+
+model Payment {
+  ID              Int               @id @default(autoincrement())
+  TransactionNo   String            @db.VarChar()
+  Amount          Decimal
+  PaymentDate     DateTime
+  Subscription    Subscription      @relation(fields: [subscriptionID], references: [ID])
+  Purchasehistory Purchasehistory[]
+  subscriptionID  Int
+  Subscriber      Subscriber?       @relation(fields: [subscriberID], references: [ID])
+  subscriberID    Int?
+}
+
+model Subscription {
+  ID        Int       @id @default(autoincrement())
+  StartDate DateTime
+  EndDate   DateTime
+  Status    String    @db.VarChar()
+  Payment   Payment[]
+}
+
+model Subscriber {
+  ID              Int               @id @default(autoincrement())
+  Username        String            @db.VarChar()
+  FirstName       String            @db.VarChar()
+  LastName        String            @db.VarChar()
+  Email           String            @db.VarChar()
+  Phone           String            @db.VarChar()
+  Address         String            @db.VarChar()
+  City            String            @db.VarChar()
+  State           String            @db.VarChar()
+  Country         String            @db.VarChar()
+  PostalCode      String            @db.VarChar()
+  IsActivated     Boolean
+  CreateDate      DateTime
+  Topicprogress   Topicprogress[]
+  Auth            Auth              @relation(fields: [authID], references: [ID])
+  Certificates    Certificate[]
+  Payments        Payment[]
+  Purchasehistory Purchasehistory[]
+  authID          Int
+}
+
+model Auth {
+  ID         Int          @id @default(autoincrement())
+  Email      String       @db.VarChar()
+  Password   String       @db.VarChar()
+  Subscriber Subscriber[]
+  Roles      Roles?       @relation(fields: [rolesID], references: [ID])
+  rolesID    Int?
+}
+
+model Certificate {
+  ID           Int         @id @default(autoincrement())
+  Courses      Course[]
+  Subscriber   Subscriber? @relation(fields: [subscriberID], references: [ID])
+  subscriberID Int?
+}
+
+model Topicprogress {
+  ID           Int         @id @default(autoincrement())
+  Progress     Decimal
+  Subscriber   Subscriber? @relation(fields: [subscriberID], references: [ID])
+  subscriberID Int?
+  Chapter      Chapter?    @relation(fields: [chapterID], references: [ID])
+  chapterID    Int?
+  Topic        Topic?      @relation(fields: [topicID], references: [ID])
+  topicID      Int?
+}
+
+model Chapter {
+  ID            Int             @id @default(autoincrement())
+  Title         String          @db.VarChar()
+  Description   String          @db.VarChar()
+  Order         Int
+  SLAG          String          @db.VarChar()
+  DESC          String          @db.VarChar()
+  DUR           Int
+  ModifiedDate  DateTime
+  SerialNo      Int
+  Topics        Topic[]
+  Topicprogress Topicprogress[]
+  Course        Course?         @relation(fields: [courseID], references: [ID])
+  courseID      Int?
+}
+
+model Topic {
+  ID               Int               @id @default(autoincrement())
+  Title            String            @db.VarChar()
+  Description      String            @db.VarChar()
+  Order            Int
+  CreatedDate      DateTime
+  ModifiedDate     DateTime
+  Selfpeacedtopics Selfpeacedtopic[]
+  Topicprogress    Topicprogress[]
+  Chapter          Chapter?          @relation(fields: [chapterID], references: [ID])
+  chapterID        Int?
+  TopicTypes       TopicTypes?       @relation(fields: [topicTypesID], references: [ID])
+  topicTypesID     Int?
+}
+
+model TopicTypes {
+  ID              Int               @id @default(autoincrement())
+  Type            String            @db.VarChar()
+  Topics          Topic[]
+  QuestionTopics  Questiontopic[]
+  ContentTopics   Contenttopic[]
+  VideoTopic      Videotopic[]
+  Selfpeacedtopic Selfpeacedtopic[]
+}
+
+model Domain {
+  ID           Int      @id @default(autoincrement())
+  Title        String   @db.VarChar()
+  Description  String   @db.VarChar()
+  CreatedDate  DateTime
+  ModifiedDate DateTime
+  Courses      Course[]
+}
+
+model SubscriptionsPlan {
+  ID              Int               @id @default(autoincrement())
+  Title           String            @db.VarChar()
+  Description     String            @db.VarChar()
+  Price           Decimal
+  CreatedDate     DateTime
+  ModifiedDate    DateTime
+  Courses         Course[]
+  Purchasehistory Purchasehistory[]
+}
+
+model Questiontopic {
+  ID           Int         @id @default(autoincrement())
+  Question     String      @db.VarChar()
+  OptionA      String      @db.VarChar()
+  OptionB      String      @db.VarChar()
+  OptionC      String      @db.VarChar()
+  OptionD      String      @db.VarChar()
+  ANS          String      @db.VarChar()
+  TopicTypes   TopicTypes? @relation(fields: [topicTypesID], references: [ID])
+  topicTypesID Int?
+}
+
+model Contenttopic {
+  ID           Int         @id @default(autoincrement())
+  Title        String      @db.VarChar()
+  Subtitle     String      @db.VarChar()
+  Content      String      @db.VarChar()
+  TimeStamp    DateTime
+  TopicTypes   TopicTypes? @relation(fields: [topicTypesID], references: [ID])
+  topicTypesID Int?
+}
+
+model Videotopic {
+  ID           Int         @id @default(autoincrement())
+  Title        String      @db.VarChar()
+  Subtitle     String      @db.VarChar()
+  Link         String      @db.VarChar()
+  Duration     Int
+  Size         Decimal
+  FileType     String      @db.VarChar()
+  TopicTypes   TopicTypes? @relation(fields: [topicTypesID], references: [ID])
+  topicTypesID Int?
+}
+
+model Selfpeacedtopic {
+  ID           Int         @id @default(autoincrement())
+  Title        String      @db.VarChar()
+  Subtitle     String      @db.VarChar()
+  Tabs         Tab[]
+  Topic        Topic?      @relation(fields: [topicID], references: [ID])
+  topicID      Int?
+  TopicTypes   TopicTypes? @relation(fields: [topicTypesID], references: [ID])
+  topicTypesID Int?
+}
+
+model Tab {
+  ID                Int              @id @default(autoincrement())
+  Title             String           @db.VarChar()
+  Subtitle          String           @db.VarChar()
+  Content           String           @db.VarChar()
+  Size              Decimal
+  Link              String           @db.VarChar()
+  FileType          String           @db.VarChar()
+  Selfpeacedtopic   Selfpeacedtopic? @relation(fields: [selfpeacedtopicID], references: [ID])
+  selfpeacedtopicID Int?
+}
+
+model Roles {
+  ID    Int    @id @default(autoincrement())
+  Name  String @db.VarChar()
+  Auths Auth[]
+}
