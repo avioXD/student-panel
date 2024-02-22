@@ -1,12 +1,9 @@
-"use client";
-
-import Image from "next/image";
-import { getDataFromToken } from "@/helper/getDataFromToken";
 import { useUserStore } from "@/store/user/userStore";
 import { useEffect } from "react";
 import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
 import HeroSection from "./_components/hero/HeroSection";
-import CategorySection from "./_components/category/CategorySection";
+import { CategorySection } from "./_components/category/CategorySection";
+import { ExploreExperience } from "./_components/explore-experience/ExploreExperience";
 
 export default function Page() {
   const { setUser, user } = useUserStore();
@@ -24,6 +21,7 @@ export default function Page() {
       <MaxWidthWrapper>
         <HeroSection />
         <CategorySection />
+        <ExploreExperience />
       </MaxWidthWrapper>
     </div>
   );

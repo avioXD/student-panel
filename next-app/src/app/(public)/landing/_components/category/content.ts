@@ -1,23 +1,20 @@
-type CategoryContentProps = {
-  title: string;
-  description: string;
+import { SectionProps } from "../../content";
 
+export interface CategoryContentProps extends SectionProps {
   link: string;
-};
+}
 
-type Category = {
+export interface Category {
   id: string;
-  name: string;
-};
+  title: string;
+}
 
-type CourseCardProps = {
+export interface CourseCardProps extends SectionProps {
   id: string;
   categoryId: string;
-  name: string;
-  description: string;
   link: string;
   image: string;
-};
+}
 
 export const categoryContent: CategoryContentProps = {
   title: "Find Course By Category",
@@ -29,23 +26,23 @@ export const categoryContent: CategoryContentProps = {
 export const category: Category[] = [
   {
     id: "1",
-    name: "Cybersecurity",
+    title: "Cybersecurity",
   },
   {
     id: "2",
-    name: "Cloud Computing",
+    title: "Cloud Computing",
   },
   {
     id: "3",
-    name: "Data Science & Analytics",
+    title: "Data Science & Analytics",
   },
   {
     id: "4",
-    name: "Digital Marketing",
+    title: "Digital Marketing",
   },
   {
     id: "5",
-    name: "Programming & Development",
+    title: "Programming & Development",
   },
 ];
 
@@ -53,7 +50,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "1",
     categoryId: "1",
-    name: "Cybersecurity Essentials",
+    title: "Cybersecurity Essentials",
     image: "https://source.unsplash.com/300x200/?cybersecurity",
     description:
       "Learn the fundamentals of cybersecurity and how it applies to the real world.",
@@ -62,7 +59,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "2",
     categoryId: "1",
-    name: "Network Security Fundamentals",
+    title: "Network Security Fundamentals",
     image: "https://source.unsplash.com/300x200/?networksecurity",
     description:
       "Explore the basics of securing computer networks and systems.",
@@ -71,7 +68,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "3",
     categoryId: "1",
-    name: "Ethical Hacking",
+    title: "Ethical Hacking",
     image: "https://source.unsplash.com/300x200/?ethicalhacking",
     description:
       "Master the techniques used by ethical hackers to secure systems.",
@@ -80,7 +77,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "4",
     categoryId: "1",
-    name: "Incident Response and Management",
+    title: "Incident Response and Management",
     image: "https://source.unsplash.com/300x200/?incidentresponse",
     description:
       "Learn how to effectively respond to and manage cybersecurity incidents.",
@@ -89,7 +86,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "5",
     categoryId: "1",
-    name: "Cryptocurrency Security",
+    title: "Cryptocurrency Security",
     image: "https://source.unsplash.com/300x200/?cryptocurrency",
     description:
       "Explore the security challenges and best practices in the cryptocurrency space.",
@@ -98,7 +95,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "6",
     categoryId: "1",
-    name: "Secure Coding Practices",
+    title: "Secure Coding Practices",
     image: "https://source.unsplash.com/300x200/?securecoding",
     description:
       "Learn how to write secure code and prevent common vulnerabilities.",
@@ -107,7 +104,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "7",
     categoryId: "3",
-    name: "Introduction to Data Science",
+    title: "Introduction to Data Science",
     image: "https://source.unsplash.com/300x200/?datascience",
     description: "Get started with the basics of data science and analytics.",
     link: "Link",
@@ -115,7 +112,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "8",
     categoryId: "3",
-    name: "Machine Learning Foundations",
+    title: "Machine Learning Foundations",
     image: "https://source.unsplash.com/300x200/?machinelearning",
     description:
       "Explore the foundational concepts of machine learning and its applications.",
@@ -124,7 +121,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "9",
     categoryId: "3",
-    name: "Data Visualization Techniques",
+    title: "Data Visualization Techniques",
     image: "https://source.unsplash.com/300x200/?datavisualization",
     description:
       "Learn how to effectively visualize data to gain insights and make informed decisions.",
@@ -133,7 +130,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "10",
     categoryId: "3",
-    name: "Big Data Analytics",
+    title: "Big Data Analytics",
     image: "https://source.unsplash.com/300x200/?bigdata",
     description:
       "Explore techniques and tools for analyzing large datasets to extract valuable insights.",
@@ -142,7 +139,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "11",
     categoryId: "3",
-    name: "Deep Learning Fundamentals",
+    title: "Deep Learning Fundamentals",
     image: "https://source.unsplash.com/300x200/?deeplearning",
     description: "Learn the basics of deep learning and neural networks.",
     link: "Link",
@@ -150,7 +147,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "12",
     categoryId: "3",
-    name: "Data Mining Techniques",
+    title: "Data Mining Techniques",
     image: "https://source.unsplash.com/300x200/?datamining",
     description:
       "Explore methods for discovering patterns and insights from large datasets.",
@@ -159,7 +156,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "13",
     categoryId: "2",
-    name: "Introduction to Cloud Computing",
+    title: "Introduction to Cloud Computing",
     image: "https://source.unsplash.com/300x200/?cloudcomputing",
     description:
       "Learn the basics of cloud computing and its benefits for businesses.",
@@ -168,7 +165,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "14",
     categoryId: "2",
-    name: "Cloud Infrastructure Management",
+    title: "Cloud Infrastructure Management",
     image: "https://source.unsplash.com/300x200/?cloudinfrastructure",
     description:
       "Explore best practices for managing cloud infrastructure and resources.",
@@ -177,7 +174,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "15",
     categoryId: "2",
-    name: "Serverless Computing",
+    title: "Serverless Computing",
     image: "https://source.unsplash.com/300x200/?serverlesscomputing",
     description:
       "Learn about serverless computing and its advantages for scalable applications.",
@@ -186,7 +183,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "16",
     categoryId: "2",
-    name: "Cloud Security Best Practices",
+    title: "Cloud Security Best Practices",
     image: "https://source.unsplash.com/300x200/?cloudsecurity",
     description:
       "Explore techniques and tools for ensuring security in cloud environments.",
@@ -195,7 +192,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "17",
     categoryId: "2",
-    name: "Cloud Migration Strategies",
+    title: "Cloud Migration Strategies",
     image: "https://source.unsplash.com/300x200/?cloudmigration",
     description:
       "Learn how to plan and execute successful cloud migration projects.",
@@ -204,7 +201,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "18",
     categoryId: "2",
-    name: "DevOps in the Cloud",
+    title: "DevOps in the Cloud",
     image: "https://source.unsplash.com/300x200/?devops",
     description:
       "Explore the integration of DevOps practices with cloud computing.",
@@ -213,7 +210,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "19",
     categoryId: "4",
-    name: "Digital Marketing Fundamentals",
+    title: "Digital Marketing Fundamentals",
     image: "https://source.unsplash.com/300x200/?digitalmarketing",
     description:
       "Learn the basics of digital marketing strategies and techniques.",
@@ -222,7 +219,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "20",
     categoryId: "4",
-    name: "Social Media Marketing",
+    title: "Social Media Marketing",
     image: "https://source.unsplash.com/300x200/?socialmediamarketing",
     description:
       "Explore effective strategies for marketing on popular social media platforms.",
@@ -231,7 +228,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "21",
     categoryId: "4",
-    name: "Search Engine Optimization (SEO)",
+    title: "Search Engine Optimization (SEO)",
     image: "https://source.unsplash.com/300x200/?seo",
     description:
       "Learn how to optimize websites for better visibility in search engine results.",
@@ -240,7 +237,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "22",
     categoryId: "4",
-    name: "Content Marketing Strategies",
+    title: "Content Marketing Strategies",
     image: "https://source.unsplash.com/300x200/?contentmarketing",
     description:
       "Explore techniques for creating and distributing valuable content to attract and engage audiences.",
@@ -249,7 +246,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "23",
     categoryId: "4",
-    name: "Email Marketing Essentials",
+    title: "Email Marketing Essentials",
     image: "https://source.unsplash.com/300x200/?emailmarketing",
     description:
       "Learn how to create effective email marketing campaigns that drive engagement and conversions.",
@@ -258,7 +255,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "24",
     categoryId: "4",
-    name: "Digital Advertising Strategies",
+    title: "Digital Advertising Strategies",
     image: "https://source.unsplash.com/300x200/?digitaladvertising",
     description:
       "Explore various digital advertising platforms and strategies for reaching target audiences.",
@@ -267,7 +264,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "25",
     categoryId: "5",
-    name: "Introduction to Programming",
+    title: "Introduction to Programming",
     image: "https://source.unsplash.com/300x200/?programming",
     description:
       "Learn the basics of programming and computer science principles.",
@@ -276,7 +273,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "26",
     categoryId: "5",
-    name: "Web Development Fundamentals",
+    title: "Web Development Fundamentals",
     image: "https://source.unsplash.com/300x200/?webdevelopment",
     description:
       "Get started with building websites using HTML, CSS, and JavaScript.",
@@ -285,7 +282,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "27",
     categoryId: "5",
-    name: "Mobile App Development",
+    title: "Mobile App Development",
     image: "https://source.unsplash.com/300x200/?mobileappdevelopment",
     description:
       "Learn how to develop mobile applications for iOS and Android platforms.",
@@ -294,7 +291,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "28",
     categoryId: "5",
-    name: "Database Management Essentials",
+    title: "Database Management Essentials",
     image: "https://source.unsplash.com/300x200/?databasemanagement",
     description:
       "Explore the fundamentals of database design, implementation, and management.",
@@ -303,7 +300,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "29",
     categoryId: "5",
-    name: "Software Engineering Principles",
+    title: "Software Engineering Principles",
     image: "https://source.unsplash.com/300x200/?softwareengineering",
     description:
       "Learn about software development methodologies and best practices.",
@@ -312,7 +309,7 @@ export const courses: CourseCardProps[] = [
   {
     id: "30",
     categoryId: "5",
-    name: "Version Control with Git",
+    title: "Version Control with Git",
     image: "https://source.unsplash.com/300x200/?git",
     description:
       "Master the use of Git for version control and collaboration in software development.",
