@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/panel/NavBar";
 import { Footer } from "react-day-picker";
 import FooterBar from "@/components/panel/FooterBar";
+import { seed } from "../../prisma/seed";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
 type RootLayoutProps = {
   children: React.ReactNode;
 };
+
+seed();
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (

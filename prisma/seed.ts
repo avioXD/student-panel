@@ -11,3 +11,8 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+
+export const seed = () => {
+  console.log("seeding");
+  main();
+};
