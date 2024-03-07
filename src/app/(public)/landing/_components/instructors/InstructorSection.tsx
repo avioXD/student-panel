@@ -37,7 +37,7 @@ export const InstructorSection = () => {
                 }}
               >
                 {instructors.map((instructor) => (
-                  <SwiperSlide className="px-4">
+                  <SwiperSlide key={instructor.id} className="px-4">
                     <InstructorCard data={instructor} className="my-4" />
                   </SwiperSlide>
                 ))}

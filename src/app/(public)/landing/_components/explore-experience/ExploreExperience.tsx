@@ -20,7 +20,7 @@ export const ExploreExperience = () => {
           <div className="mx-auto relative">
             <div className="grid grid-cols-1 md:grid-cols-2   gap-6 md:gap-10 ">
               {experiences.map((experience) => (
-                <ExploreExperienceCard data={experience} />
+                <ExploreExperienceCard key={experience.id} data={experience} />
               ))}
             </div>
           </div>
