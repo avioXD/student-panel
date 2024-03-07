@@ -1,9 +1,9 @@
 import React from "react";
 import { CourseCardProps } from "../content";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
 import { CornerDownRight } from "lucide-react";
 import Link from "next/link";
+import Image from "@/components/ui/image";
 
 interface Props {
   data: CourseCardProps;
@@ -17,7 +17,7 @@ export const CourseCard: React.FC<Props> = ({
       <div className="rounded-x">
         <div className="mb-3">
           {image ? (
-            <img
+            <Image
               src={image}
               alt={title}
               className="object-cover rounded-xl w-full h-[220px] bg-slate-500 backdrop-blur-xl"

@@ -1,3 +1,4 @@
+import Image from "@/components/ui/image";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import { FooterOptionsCard } from "./_components/OptionsCard";
 import {
@@ -21,7 +22,8 @@ export default function FooterBar() {
           <div className="  p-8">
             {" "}
             <div className="mb-8 ">
-              <img
+              <Image
+                fill={true}
                 src="/assets/logo/logo-offset.svg"
                 alt="Dataspace Academy Logo"
                 className="h-12 mx-auto md:mx-0   "
@@ -53,7 +55,11 @@ export default function FooterBar() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img src={option.icon} alt={option.label} />
+                          <Image
+                            fill={true}
+                            src={option.icon as any}
+                            alt={option.label}
+                          />
                         </a>
                       </li>
                     ))}

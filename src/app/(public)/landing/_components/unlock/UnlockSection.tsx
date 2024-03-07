@@ -2,6 +2,7 @@ import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
 import { unlockSectionContent } from "./content";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "@/components/ui/image";
 
 interface Props {}
 
@@ -27,7 +28,8 @@ export const UnlockAccessSection: React.FC<Props> = ({}) => {
                 </div>
               </div>
               <div className="hidden md:flex  justify-center items-center max-h-[12rem]">
-                <img
+                <Image
+                  fill={true}
                   src={unlockSectionContent.icon}
                   alt={unlockSectionContent.title}
                   className="object-contain h-full w-full scale-150 opacity-75 "

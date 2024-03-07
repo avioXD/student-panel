@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    minimumCacheTTL: 10000,
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 };
 

@@ -2,6 +2,7 @@ import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
 import { heroContent } from "./content";
 import { GradientText } from "@/components/ui/typography/gradient-text";
 import { Button } from "@/components/ui/button";
+import Image from "@/components/ui/image";
 
 export default function HeroSection() {
   return (
@@ -34,7 +35,8 @@ export default function HeroSection() {
           </div>
           <div className="px-1 relative md:mx-6 xl:mx-10 ">
             <div className="border-2  rounded-xl border-gray-400 bg-white">
-              <img
+              <Image
+                fill={true}
                 src="/assets/svgs/video-frame.svg"
                 alt="hero"
                 className="w-full"

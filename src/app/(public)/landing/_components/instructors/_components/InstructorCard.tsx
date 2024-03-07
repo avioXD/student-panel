@@ -1,6 +1,7 @@
 import React from "react";
 import { InstructorCardProps } from "../content";
 import { cn } from "@/lib/utils";
+import Image from "@/components/ui/image";
 
 interface Props {
   data: InstructorCardProps;
@@ -16,7 +17,8 @@ export const InstructorCard: React.FC<Props> = ({
       <div className="  relative mb-8 ">
         <div className=" p-2  rounded-xl bg-white  h-[800px]  md:h-[440px] lg:h-[430px] xl:h-[400px] shadow-md md:ml-28 md:pl-28">
           <div className="p-2 md:hidden">
-            <img
+            <Image
+              fill={true}
               src={image}
               alt={name}
               className="w-52 h-52 rounded-xl object-cover bg-slate-500 backdrop-blur-md"
@@ -29,7 +31,8 @@ export const InstructorCard: React.FC<Props> = ({
           </div>
         </div>
         <div className="hidden md:flex md:absolute left-0 bottom-0 top-[10%] items-center justify-center">
-          <img
+          <Image
+            fill={true}
             src={image}
             alt={name}
             className="w-52 h-52 rounded-xl object-cover bg-slate-500 backdrop-blur-md"
