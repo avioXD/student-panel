@@ -6,7 +6,7 @@ import Image from "@/components/ui/image";
 
 const Navbar = () => {
   return (
-    <div className="shadow-md bg-white">
+    <div className="shadow-md sticky top-0 z-10 bg-white">
       <MaxWidthWrapper>
         <div className="h-[80px] flex items-center justify-between  ">
           <div>
