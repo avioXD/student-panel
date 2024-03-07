@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
+interface Props {}
 // Add any props you need for the component here
 
 const HelpSupport: React.FC<Props> = (
