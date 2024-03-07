@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 @layer base {
     :root {
@@ -13,11 +14,14 @@
         --popover: 0 0% 100%;
         --popover-foreground: 222.2 84% 4.9%;
 
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
+        --primary: 212.72, 100%, 44.9%;
+        --primary-foreground: 0, 0%, 100%;
 
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
+        --offset: 212.72, 100%, 44.9%;
+        --offset-foreground: 0, 0%, 100%;
+
+        --secondary: 0 0% 0%;
+        --secondary-foreground: 0, 0%, 100%;
 
         --muted: 210 40% 96.1%;
         --muted-foreground: 215.4 16.3% 46.9%;
@@ -25,14 +29,18 @@
         --accent: 210 40% 96.1%;
         --accent-foreground: 222.2 47.4% 11.2%;
 
-        --destructive: 0 84.2% 60.2%;
+        --destructive: 0 100% 50%;
         --destructive-foreground: 210 40% 98%;
 
         --border: 214.3 31.8% 91.4%;
         --input: 214.3 31.8% 91.4%;
         --ring: 222.2 84% 4.9%;
+        --gradient: 91deg, #ffdb0d 2.98%, #12ffc8 95.16%;
+        --radius: 8px;
 
-        --radius: 0.5rem;
+        --font-sans: "Raleway";
+
+        --swiper-pagination-bottom: 0px;
     }
 
     .dark {
@@ -73,5 +81,24 @@
 
     body {
         @apply bg-background text-foreground;
+        font-family: "Raleway", sans-serif;
     }
+
+    .bg-gradient {
+        background: linear-gradient(91deg, #ffdb0d 2.98%, #12ffc8 95.16%);
+    }
+
+    .bg-gradient-secondary {
+        background: linear-gradient(91deg, #0dfac3 2.98%, #ffd900 95.16%);
+    }
+
+    .text-heading {
+        @apply text-3xl font-normal;
+    }
+
+    .text-subheading {
+        @apply max-w-[50rem];
+    }
+
+    /* ... Swiper */
 }

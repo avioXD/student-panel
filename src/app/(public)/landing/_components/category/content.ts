@@ -23,7 +23,7 @@ export const categoryContent: CategoryContentProps = {
   link: "Link",
 };
 
-export const category: Category[] = [
+export const categoryList: Category[] = [
   {
     id: "1",
     title: "Cybersecurity",
@@ -46,7 +46,7 @@ export const category: Category[] = [
   },
 ];
 
-export const courses: CourseCardProps[] = [
+export const coursesList: CourseCardProps[] = [
   {
     id: "1",
     categoryId: "1",

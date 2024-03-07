@@ -1,19 +1,24 @@
 import { User } from "@/models/user/user";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-interface UserState {
+
+type UserStore = {
   user: User | null;
-  setUser: (user: User | null) => void;
-}
+  setUser: (user: User) => void;
+  logout: () => void;
+};
 
 export const useUserStore = create(
-  persist<UserState>(
+  persist<UserStore>(
     (set) => ({
       user: null,
-      setUser: (user: User | null) => set({ user }),
+      setUser: (user) => set({ user }),
+      logout: () => set({ user: null }),
     }),
     {
-      name: "user",
+      name: "user-storage",
     }
   )
 );
+
+export default useUserStore;

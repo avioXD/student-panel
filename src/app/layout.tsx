@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Raleway as FontSans } from "next/font/google";
 import "@/app/styles/global.css";
 
 import { cn } from "@/lib/utils";
 
-import Navbar from "@/components/panel/NavBar";
-import { Footer } from "react-day-picker";
-import FooterBar from "@/components/panel/FooterBar";
-import { seed } from "../../prisma/seed";
+import Navbar from "@/components/panel/nav-bar/NavBar";
+import FooterBar from "@/components/panel/footer-bar/FooterBar";
+import { Toaster } from "@/components/ui/sonner";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,12 +23,15 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-seed();
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
+      {/* <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      /> */}
+
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -41,6 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div>{children}</div>
           <FooterBar />
         </div>
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

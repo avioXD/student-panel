@@ -1,17 +1,42 @@
 import React from "react";
 import { CourseCardProps } from "../content";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
+import { CornerDownRight } from "lucide-react";
+import Link from "next/link";
 
-export const CourseCard: React.FC<CourseCardProps> = ({
-  id,
-  categoryId,
-  description,
-  image,
-  link,
-  title,
+interface Props {
+  data: CourseCardProps;
+}
+
+export const CourseCard: React.FC<Props> = ({
+  data: { image, title, description, link },
 }) => {
   return (
-    <div>
-      <h1>Card</h1>
+    <div className=" p-4   rounded-xl  bg-gray-600 bg-opacity-20 backdrop-blur-md  ">
+      <div className="rounded-x">
+        <div className="mb-3">
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="object-cover rounded-xl w-full h-[220px] bg-slate-500 backdrop-blur-xl"
+            />
+          ) : (
+            <div className="bg-gray-200 animate-pulse rounded-xl w-full h-[220px]" />
+          )}
+        </div>
+        <div className="text-white">
+          <p className="text-md mb-4">{title}</p>
+          <Link
+            href={"/"}
+            className="text-xs flex gap-x-2 no-underline  text-decoration-line: hover:underline"
+          >
+            <CornerDownRight size={15} />
+            View Details
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
