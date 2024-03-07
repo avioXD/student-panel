@@ -9,7 +9,7 @@ import { QnaSection } from "./_components/qna/QnaSection";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div>
         <HeroSection />
         <CategorySection />
