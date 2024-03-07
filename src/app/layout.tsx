@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <div>
           <Navbar />
-          <div>{children}</div>
+          <div className="min-h-screen">{children}</div>
           <FooterBar />
         </div>
         <Toaster position="bottom-right" />

@@ -1,4 +1,4 @@
-import HeroSection from "./_components/hero/HeroSection";
+import { HeroSection } from "./_components/hero/HeroSection";
 import { CategorySection } from "./_components/category/CategorySection";
 import { ExploreExperience } from "./_components/explore-experience/ExploreExperience";
 import { InstructorSection } from "./_components/instructors/InstructorSection";

@@ -4,9 +4,9 @@ import { GradientText } from "@/components/ui/typography/gradient-text";
 import { Button } from "@/components/ui/button";
 import Image from "@/components/ui/image";
 
-export default function HeroSection() {
+export const HeroSection = () => {
   return (
-    <section className="relative   pb-10 py-[40px] md:py-[100px]">
+    <section className="relative min-h-screen-md   pb-10 py-[40px] md:py-[100px]">
       <div className="absolute   left-0 right-0 top-0 bottom-0">
         <div className=" absolute bottom-[10%] left-[20%]  w-[400px] h-[400px] rotate-45 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-50 "></div>
@@ -59,4 +59,4 @@ export default function HeroSection() {
       </MaxWidthWrapper>
     </section>
   );
-}
+};
