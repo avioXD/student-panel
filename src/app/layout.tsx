@@ -25,7 +25,11 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="scroll-smooth ease-in-out"
+    >
       <head />
       {/* <link
         rel="stylesheet"

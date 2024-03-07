@@ -6,6 +6,7 @@ import { InstructorSection } from "./(public)/landing/_components/instructors/In
 import { UnlockAccessSection } from "./(public)/landing/_components/unlock/UnlockSection";
 import { TestimonialSection } from "./(public)/landing/_components/testimonials/TestimonialSection";
 import { QnaSection } from "./(public)/landing/_components/qna/QnaSection";
+import LandingPage from "./(public)/landing/page";
 
 export default function Page() {
   // useEffect(() => {
@@ -14,14 +15,7 @@ export default function Page() {
 
   return (
     <div>
-      <HeroSection />
-      <CategorySection />
-      <WtsSection />
-      <ExploreExperience />
-      <InstructorSection />
-      <TestimonialSection />
-      <UnlockAccessSection />
-      <QnaSection />
+      <LandingPage />
     </div>
   );
 }

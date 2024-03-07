@@ -6,12 +6,12 @@ import Image from "@/components/ui/image";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen-md   pb-10 py-[40px] md:py-[100px]">
+    <section className="relative  min-h-[80vh]  pb-10  flex items-center  ">
       <div className="absolute   left-0 right-0 top-0 bottom-0">
         <div className=" absolute bottom-[10%] left-[20%]  w-[400px] h-[400px] rotate-45 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-50 "></div>
       </div>
-      <MaxWidthWrapper className="relative">
+      <MaxWidthWrapper className="relative py-auto">
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 md:gap-8 items-center ">
           <div className="flex flex-col gap-4">
             <GradientText className="text-sm  mx-auto md:mx-0 ">

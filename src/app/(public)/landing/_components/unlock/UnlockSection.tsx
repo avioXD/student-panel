@@ -8,7 +8,7 @@ interface Props {}
 
 export const UnlockAccessSection: React.FC<Props> = ({}) => {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <MaxWidthWrapper>
         <div className="my-10 relative">
           <div className="absolute -inset-3 rounded-lg bg-gradient-secondary opacity-75 blur-md mx-10 mt-10"></div>
