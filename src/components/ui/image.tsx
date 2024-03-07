@@ -4,7 +4,7 @@ import React from "react";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 import { cn } from "@/lib/utils";
 
-type ImageProps = NextImageProps;
+type ImageProps = any;
 
 interface imageLoaderProps {
   src: string;
