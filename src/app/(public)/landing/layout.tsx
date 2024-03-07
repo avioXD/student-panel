@@ -9,14 +9,17 @@ import { QnaSection } from "./_components/qna/QnaSection";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <HeroSection />
-      <CategorySection />
-      <WtsSection />
-      <ExploreExperience />
-      <InstructorSection />
-      <TestimonialSection />
-      <UnlockAccessSection />
-    </div>
+    <section>
+      <div>
+        <HeroSection />
+        <CategorySection />
+        <WtsSection />
+        <ExploreExperience />
+        <InstructorSection />
+        <TestimonialSection />
+        <UnlockAccessSection />
+        <QnaSection />
+      </div>
+    </section>
   );
 }
