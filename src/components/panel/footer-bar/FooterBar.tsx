@@ -18,8 +18,8 @@ export default function FooterBar() {
       </div>
 
       <MaxWidthWrapper>
-        <div className="my-[60px] flex flex-col relative mx-4 rounded-xl border-2 border-gray-600   ">
-          <div className="  p-8">
+        <div className="my-[60px] flex flex-col relative md:mx-4 rounded-xl md:border-2 md:border-gray-600   ">
+          <div className="  md:p-8">
             {" "}
             <div className="mb-8 ">
               <Image
