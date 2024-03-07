@@ -1,11 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { options } from "./content";
 
 export const Menu: React.FC<any> = () => {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   return (
     <div>
