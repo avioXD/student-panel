@@ -1,9 +1,12 @@
 interface Props {}
 
-export const LoginPage: React.FC<Props> = () => {
+const LoginPage: React.FC<Props> = () => {
+  // Your code here
   return (
     <div>
-      <h1>Login Page</h1>
+      <h1>Login</h1>
     </div>
   );
 };
+
+export default LoginPage;

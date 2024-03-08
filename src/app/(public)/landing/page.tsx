@@ -7,7 +7,7 @@ import { WtsSection } from "./_components/where-to-start/WtsSection";
 import { TestimonialSection } from "./_components/testimonials/TestimonialSection";
 import { QnaSection } from "./_components/qna/QnaSection";
 
-export default function LandingPage() {
+const LandingPage: React.FC<any> = () => {
   return (
     <div className="overflow-hidden w-full">
       <HeroSection />
@@ -20,4 +20,6 @@ export default function LandingPage() {
       <QnaSection />
     </div>
   );
-}
+};
+
+export default LandingPage;
