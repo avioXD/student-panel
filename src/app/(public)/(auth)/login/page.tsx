@@ -6,7 +6,7 @@ interface Props {}
 const LoginPage: React.FC<Props> = () => {
   // Your code here
   return (
-    <section className="bg-white h-screen w-100 ">
+    <section className="bg-white h-screen  ">
         <div className="h-1/2 bg-black  ">
             <div className="absolute backdrop-blur-sm left-0 right-0 top-0 bottom-0 h-1/2">
               <div className=" absolute bottom-[10%] left-[20%]  w-[400px] h-[300px] rotate-30 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
@@ -47,12 +47,12 @@ const LoginPage: React.FC<Props> = () => {
                       </div>
 
                       <div className="pt-2 gap-y-2 ">
-                        <div className="w-full ">
+                        <div className="w-full pb-3 ">
                         <Input type="tel" placeholder="Phone Number"   />
                         </div>
                         <div className="w-full">
                           <div className="rounded-[10px] border flex-row flex justify-start  sm:!justify-start  w-full items-start ">
-                            <input type="password" placeholder="Password" className="mt-1 w-full border rounded-md px-3 py-2 focus:border-transparent focus:outline-none" />
+                          <Input type="tel" placeholder="Password"   />
                           </div>
                         </div>
                       </div>
