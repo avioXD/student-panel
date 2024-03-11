@@ -16,7 +16,7 @@ const LoginPage: React.FC<Props> = () => {
             </div>
             <MaxWidthWrapper className="relative">
               <div className="justify-center align-middle flex items-center h-screen">
-                <div className=" w-screen lg:max-w-[500px]"  >
+                <div className=" w-screen lg:max-w-[400px]"  >
                   <div className="text-heading text-white text-center mb-4" >Welcome Back!</div>
                   <div className=" text-subheading text-white text-center">Login to access your account and continue your learning journey</div>
                   
