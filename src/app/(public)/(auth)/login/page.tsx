@@ -12,6 +12,7 @@ const LoginPage: React.FC<Props> = () => {
           <div className=" absolute top-[10%] right-[40%]  w-[400px] h-[60%] bg-green-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
           <div className=" absolute top-[10%] right-[10%] w-[400px] h-[60%] bg-violet-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
         </div>
+        {/*  */}
         <MaxWidthWrapper className="relative">
           <div className="justify-center align-middle flex items-center">
             <div className="lg:max-w-[500px]">
