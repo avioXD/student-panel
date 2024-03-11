@@ -1,5 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 interface Props {}
 
 const LoginPage: React.FC<Props> = () => {
@@ -47,9 +48,7 @@ const LoginPage: React.FC<Props> = () => {
 
                       <div className="pt-2 gap-y-2 ">
                         <div className="w-full ">
-                          <div className="rounded-[10px] border flex-row flex justify-start  sm:!justify-start  w-full items-start">
-                            <input type="tel" placeholder="Phone Number" className=" w-full border rounded-md px-3 py-2 focus:border-transparent focus:outline-none" />
-                          </div>
+                        <Input type="tel" placeholder="Phone Number"   />
                         </div>
                         <div className="w-full">
                           <div className="rounded-[10px] border flex-row flex justify-start  sm:!justify-start  w-full items-start ">
