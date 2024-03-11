@@ -16,7 +16,7 @@ const LoginPage: React.FC<Props> = () => {
             </div>
             <MaxWidthWrapper className="relative">
               <div className="justify-center align-middle flex items-center h-screen">
-                <div className=" w-screen lg:max-w-[400px]"  >
+                <div className=" w-screen lg:max-w-[500px]"  >
                   <div className="text-heading text-white text-center mb-4" >Welcome Back!</div>
                   <div className=" text-subheading text-white text-center">Login to access your account and continue your learning journey</div>
                   
@@ -47,11 +47,18 @@ const LoginPage: React.FC<Props> = () => {
                       </div>
 
 
-                      <div className="flex gap-2 pt-4 items-center">
-                        <div className="md:w-1/3 flex justify-end"><div className="h-px bg-gray-400 w-full mr-2"></div></div>
-                        <div className="w-1/3 flex justify-center flex-1 md:flex-0"> Or login with</div>
-                        <div className="md:w-1/3 flex justify-start"><div className="h-px bg-gray-400 w-full mr-2"></div></div>
-                      </div>
+                  <div className="flex gap-2 pt-4 items-center">
+                    <div className="md:w-1/3 flex justify-end">
+                      <div className="h-px bg-gray-400 w-full mr-2"></div>
+                    </div>
+                    <div className="w-1/3 flex justify-center flex-1 md:flex-0">
+                      {" "}
+                      Or login with
+                    </div>
+                    <div className="md:w-1/3 flex justify-start">
+                      <div className="h-px bg-gray-400 w-full mr-2"></div>
+                    </div>
+                  </div>
 
                       <div className="pt-2 gap-y-2 ">
                         <div className="w-full pb-3 ">
@@ -62,6 +69,8 @@ const LoginPage: React.FC<Props> = () => {
                         </div>
                       </div>
 
+
+                      
                       <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">Forget Password?</div>
                       <Button className="w-full ">Login</Button>
                       <div className="text-dark flex justify-center py-5 text-sm">Don’t have an account? <span className="text-sky-600 cursor-pointer pl-1">Register now</span></div>
