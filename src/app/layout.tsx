@@ -4,16 +4,14 @@ import "@/app/styles/global.css";
 
 import { cn } from "@/lib/utils";
 
-import Navbar from "@/components/panel/nav-bar/NavBar";
-import FooterBar from "@/components/panel/footer-bar/FooterBar";
 import { Toaster } from "@/components/ui/sonner";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Self Learning",
   description: "DataspaceAcademy Self Learning",
 };
