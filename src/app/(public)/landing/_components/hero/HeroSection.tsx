@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { heroContent } from "./content";
 import { GradientText } from "@/components/ui/typography/gradient-text";
 import { Button } from "@/components/ui/button";

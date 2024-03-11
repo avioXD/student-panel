@@ -42,11 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        <div>
-          <Navbar />
-          <div className="min-h-screen">{children}</div>
-          <FooterBar />
-        </div>
+        <div>{children}</div>
         <Toaster position="bottom-right" />
       </body>
     </html>

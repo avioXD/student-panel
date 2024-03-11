@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { CourseCard } from "./_components/CourseCard";
 import { categoryContent, categoryList, coursesList } from "./content";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

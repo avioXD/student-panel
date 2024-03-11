@@ -1,5 +1,5 @@
 import React from "react";
-import MaxWidthWrapper from "../MaxWidthWrapper";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 import { Menu } from "./_components/menu/Menu";
 import { Profile } from "./_components/profile/Profile";
 import Image from "@/components/ui/image";

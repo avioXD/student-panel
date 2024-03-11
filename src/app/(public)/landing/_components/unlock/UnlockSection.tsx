@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { unlockSectionContent } from "./content";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

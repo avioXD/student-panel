@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { experiences, exploreExperience } from "./content";
 import { ExploreExperienceCard } from "./_components/ExploreExperienceCard";
 

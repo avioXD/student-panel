@@ -1,6 +1,6 @@
 "use client";
 
-import MaxWidthWrapper from "@/components/panel/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { InstructorCard } from "./_components/InstructorCard";
 import { instructorSection, instructors } from "./content";
 

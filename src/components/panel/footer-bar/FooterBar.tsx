@@ -1,5 +1,5 @@
 import Image from "@/components/ui/image";
-import MaxWidthWrapper from "../MaxWidthWrapper";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 import { FooterOptionsCard } from "./_components/OptionsCard";
 import {
   LinksSectionContent,
