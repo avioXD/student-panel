@@ -26,21 +26,21 @@ const LoginPage: React.FC<Props> = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-100 gap-2 pt-3">
                         <div className="cursor-pointer ">
                           <Button  
-                          size={"md"}
+                          size={"sm"}
                           variant={"outline"}
                           className="gap-x-2 flex w-full   "
                         >
-                          <Image src="/assets/icons/google.svg" width={28} />
+                          <Image src="/assets/icons/google.svg" width={22} />
                           Login With Google
                           </Button>
                         </div>
                         <div className=" cursor-pointer  ">
                           <Button  
-                          size={"md"}
+                          size={"sm"}
                           variant={"outline"}
-                          className="gap-x-2 flex  w-full "
+                          className="gap-x-2 flex  w-full   "
                         >
-                          <Image src="/assets/icons/github.svg" width={28} />
+                          <Image src="/assets/icons/github.svg" width={22} />
                           Login With GitHub
                           </Button>
                         </div>
