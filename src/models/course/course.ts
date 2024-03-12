@@ -1,3 +1,5 @@
+import { cache } from "react";
+
 export interface CourseModel {
   id: string;
   title: string;
@@ -13,6 +15,15 @@ export interface CourseModel {
   students: number;
   metadata: any;
 }
+
+export const getCourses = cache(async () => {
+  const response = await fetch(
+    "https://f5dfjtfybg.execute-api.ap-south-1.amazonaws.com/default/courses_v1"
+  );
+
+  const data = await response.json();
+  return data;
+});
 
 export const courses: CourseModel[] = [
   {

@@ -2,9 +2,9 @@ import axios from "axios";
 import { cache } from "react";
 
 import { SectionProps } from "@/models/global_props/props";
-import { domains } from "@/models/course/domain";
+import { DomainModel, domains } from "@/models/course/domain";
 import { JobRolesModel, jobRoles } from "@/models/course/roles";
-import { CourseModel, courses } from "@/models/course/course";
+import { CourseModel, getCourses } from "@/models/course/course";
 import { apiMode } from "@/lib/apimode";
 
 interface PathsSectionProps extends SectionProps {}
@@ -18,13 +18,11 @@ export const pathsSectionContent: PathsSectionProps = {
 export const getPathsByDomain = cache(async () => {
   /** Implement API */
   if (apiMode.isProduction) {
-    const response = await axios.get(
-      "https://api.example.com/v1/learning-paths/domains"
-    );
-    return response.data;
   }
 
   if (apiMode.isDevelopment) {
+    const courses: CourseModel[] = await getCourses();
+
     return domains.map((domain) => {
       return {
         id: domain.id,
@@ -56,6 +54,7 @@ export const getPathsByJonRoles = cache(async () => {
   }
 
   if (apiMode.isDevelopment) {
+    const courses: CourseModel[] = await getCourses();
     return jobRoles.map((role) => {
       return {
         id: role.id,
