@@ -1,4 +1,4 @@
-import { SectionProps } from "../../content";
+import { SectionProps } from "@/models/global_props/props";
 
 export interface TestimonialSectionProps extends SectionProps {}
 
@@ -128,5 +128,5 @@ export const testimonialReviews: TestimonialCardProps[] = [
       "The courses have helped me gain confidence in my abilities. The practical projects have allowed me to apply what I've learned in a real-world setting. I'm excited to continue my learning journey on this platform.",
     stars: 4,
     avatar: "https://source.unsplash.com/300x200/?avatar",
-  }
+  },
 ];

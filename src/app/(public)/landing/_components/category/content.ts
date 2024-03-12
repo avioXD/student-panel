@@ -1,4 +1,4 @@
-import { SectionProps } from "../../content";
+import { SectionProps } from "@/models/global_props/props";
 
 export interface CategoryContentProps extends SectionProps {
   link: string;
