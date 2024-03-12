@@ -4,6 +4,8 @@ export interface DomainModel {
   id: string;
   title: string;
   description: string;
+  courses?: CourseModel[];
+  totalDuration?: number;
 }
 
 export const domains: DomainModel[] = [
