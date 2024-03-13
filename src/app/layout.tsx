@@ -5,6 +5,7 @@ import "@/app/styles/global.css";
 import { cn } from "@/lib/utils";
 
 import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/panel/nav-bar/NavBar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -36,11 +37,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased relative",
           fontSans.variable
         )}
       >
-        <div>{children}</div>
+        {children}
         <Toaster position="bottom-right" />
       </body>
     </html>

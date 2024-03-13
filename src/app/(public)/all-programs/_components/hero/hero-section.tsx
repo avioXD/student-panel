@@ -12,7 +12,7 @@ export const HeroSection = () => {
       <MaxWidthWrapper>
         <div className=" py-[100px] flex flex-col relative text-white">
           <div className="text-center flex flex-col gap-8  mb-6 md:mb-10 max-w-screen-md mx-auto">
-            <h1 className="text-title leading-relaxed">
+            <h1 className="text-heading md:text-title leading-relaxed">
               Accelerate your career in <br /> <strong>Cybersecurity</strong>
             </h1>
             <p className="text-subheading mx-auto">{heroContent.content}</p>

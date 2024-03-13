@@ -6,14 +6,12 @@ import { QnaSection } from "../landing/_components/qna/QnaSection";
 
 const Page: React.FC = () => {
   return (
-    <div>
-      <Layout>
-        <HeroSection />
-        <PlanSection />
-        <TestimonialSection />
-        <QnaSection />
-      </Layout>
-    </div>
+    <Layout>
+      <HeroSection />
+      <PlanSection />
+      <TestimonialSection />
+      <QnaSection />
+    </Layout>
   );
 };
 

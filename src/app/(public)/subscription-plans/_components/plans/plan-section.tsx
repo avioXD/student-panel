@@ -34,10 +34,10 @@ const PlanSection: React.FC = async () => {
           </MaxWidthWrapper>
 
           {/* <p className="text-center text-subheading mb-4">{offer}</p> */}
-          <TabsContent value="monthly" className="w-full  ">
+          <TabsContent value="monthly" className="w-full px-10 ">
             <Plans plan="monthly" />
           </TabsContent>
-          <TabsContent value="yearly" className="w-full">
+          <TabsContent value="yearly" className="w-full px-10">
             <Plans plan="yearly" />
           </TabsContent>
         </Tabs>

@@ -2,6 +2,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Image from "@/components/ui/image";
 import { Input, PasswordInput } from "@/components/ui/input";
+import Link from "next/link";
 interface Props {}
 
 const RegisterPage: React.FC<Props> = () => {
@@ -77,9 +78,11 @@ const RegisterPage: React.FC<Props> = () => {
                   <Button className="w-full mt-5">Register Now</Button>
                   <div className="text-dark flex justify-center py-5 text-sm">
                     Already have an account?{" "}
-                    <span className="text-sky-600 cursor-pointer pl-1">
-                      Login now
-                    </span>
+                    <Link href="/login">
+                      <span className="text-sky-600 cursor-pointer pl-1">
+                        Login now
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -29,13 +29,13 @@ export const CategorySection = () => {
                     key={category.id}
                     variant="secondary"
                     value={category.id}
-                    className="md:mx-4 xl:mx-6"
+                    className="mx-0 md:mx-2 xl:mx-6 text-sm lg:text-base"
                   >
                     {category.title}
                   </TabsTrigger>
                 ))}
               </TabsList>
-              <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 ">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 ">
                 {" "}
                 {coursesList.map((course: any) => (
                   <TabsContent key={course.id} value={course.categoryId}>

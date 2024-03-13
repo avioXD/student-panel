@@ -10,18 +10,16 @@ import Layout from "@/components/Layout";
 
 const LandingPage: React.FC<any> = () => {
   return (
-    <div className="overflow-hidden w-full">
-      <Layout>
-        <HeroSection />
-        <CategorySection />
-        <WtsSection />
-        <ExploreExperience />
-        <InstructorSection />
-        <TestimonialSection />
-        <UnlockAccessSection />
-        <QnaSection />
-      </Layout>
-    </div>
+    <Layout>
+      <HeroSection />
+      <CategorySection />
+      <WtsSection />
+      <ExploreExperience />
+      <InstructorSection />
+      <TestimonialSection />
+      <UnlockAccessSection />
+      <QnaSection />
+    </Layout>
   );
 };
 

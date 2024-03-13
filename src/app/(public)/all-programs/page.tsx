@@ -9,17 +9,15 @@ import { QnaSection } from "../landing/_components/qna/QnaSection";
 
 const Page: React.FC<any> = () => {
   return (
-    <div className="overflow-hidden w-full">
-      <Layout>
-        <HeroSection />
-        <Programs />
-        <ExploreExperience />
-        <InstructorSection />
-        <TestimonialSection />
-        <UnlockAccessSection />
-        <QnaSection />
-      </Layout>
-    </div>
+    <Layout>
+      <HeroSection />
+      <Programs />
+      <ExploreExperience />
+      <InstructorSection />
+      <TestimonialSection />
+      <UnlockAccessSection />
+      <QnaSection />
+    </Layout>
   );
 };
 

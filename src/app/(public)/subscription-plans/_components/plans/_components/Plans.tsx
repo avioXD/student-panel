@@ -15,10 +15,10 @@ const Plans: React.FC<Props> = async ({ plan }) => {
 
   return (
     <div>
-      <table className="w-full border-collapse bg-white  sticky top-20 mx-10">
+      <table className="w-full border-collapse bg-white  sticky top-20 z-5">
         <thead className=" bg-white ">
           <tr className="h-28 ">
-            <th className="w-3/12 border-b  border-r pl-4"></th>
+            <th className="w-3/12 border-b  border-r "></th>
             <th className="text-start border-b  border-r pl-4">
               {" "}
               {/* Add border-b class for bottom border */}
@@ -50,50 +50,46 @@ const Plans: React.FC<Props> = async ({ plan }) => {
           </tr>
         </thead>
       </table>{" "}
-      <table className="w-full border-collapse bg-white mx-10">
-        <thead className=" bg-white sticky top-0">
+      <table className="w-full border-collapse bg-white overflow-hidden">
+        {/* <thead className=" bg-white sticky top-0">
           <tr>
             <th className="w-3/12 "></th>
-            <th className="text-start w-3/12 "></th>
-            <th className="text-start  w-3/12  "> </th>
-            <th className="text-start  w-3/12  "></th>
+            <th className=" w-3/12 "></th>
+            <th className=" w-3/12  "> </th>
+            <th className="w-3/12  "></th>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           {subscriptionPlans &&
-            [
-              ...subscriptionPlans,
-              ...subscriptionPlans,
-              ...subscriptionPlans,
-            ].map((plan) => (
-              <tr key={plan.id} className="h-20">
-                <td className="  border-r pl-4">{plan.feature}</td>{" "}
+            subscriptionPlans.map((plan) => (
+              <tr key={plan.id} className="h-[4rem]  ">
+                <td className="  border-r pl-4 w-3/12">{plan.feature}</td>{" "}
                 {/* Add border-b class for bottom border */}
-                <td className="  border-r  pl-4">
-                  {plan.starter.feature}
+                <td className="  border-r  pl-4 w-3/12">
+                  {(plan.starter.canHave && plan.starter.feature) || "-"}
                 </td>{" "}
                 {/* Add   class for bottom border */}
-                <td className="  border-r  pl-4">
-                  {plan.standard.feature}
+                <td className="  border-r  pl-4 w-3/12">
+                  {(plan.standard.canHave && plan.standard.feature) || "-"}
                 </td>{" "}
                 {/* Add   class for bottom border */}
-                <td className="   pl-4">{plan.premium.feature}</td>{" "}
+                <td className="   pl-4 w-3/12">{plan.premium.feature}</td>{" "}
                 {/* Add border-b class for bottom border */}
               </tr>
             ))}
           <tr className="h-20">
-            <td className="  border-r pl-4"> </td>{" "}
+            <td className="  border-r pl-4 w-3/12"> </td>{" "}
             {/* Add border-b class for bottom border */}
-            <td className="  border-r  pl-4">
-              <Button>Start Learning</Button>
+            <td className="  border-r  pl-4 w-3/12">
+              <Button variant={"secondary"}>Start Learning</Button>
             </td>{" "}
             {/* Add   class for bottom border */}
-            <td className="  border-r  pl-4">
-              <Button>Select Plan</Button>
+            <td className="  border-r  pl-4 w-3/12">
+              <Button variant={"secondary"}>Select Plan</Button>
             </td>{" "}
             {/* Add   class for bottom border */}
-            <td className="   pl-4">
-              <Button>Select Plan</Button>
+            <td className="   pl-4 w-3/12">
+              <Button variant={"secondary"}>Select Plan</Button>
             </td>{" "}
             {/* Add border-b class for bottom border */}
           </tr>
