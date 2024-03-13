@@ -1,7 +1,7 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { CourseCard } from "./_components/CourseCard";
 import { categoryContent, categoryList, coursesList } from "./content";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CourseCard } from "@/components/common/course-card";
 
 export const CategorySection = () => {
   return (

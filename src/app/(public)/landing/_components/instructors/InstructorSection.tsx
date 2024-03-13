@@ -18,7 +18,7 @@ export const InstructorSection = () => {
         <div className=" absolute bottom-[10%] right-[20%]  w-80 h-[60%] bg-red-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
       </div>
       <MaxWidthWrapper className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-[50px] ">
           <div className="col-span-1  flex flex-col ">
             <h2 className="text-2xl mb-1">{instructorSection.title_sub}</h2>
             <h2 className="text-heading">{instructorSection.title}</h2>

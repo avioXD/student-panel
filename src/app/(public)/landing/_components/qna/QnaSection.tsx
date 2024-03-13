@@ -14,7 +14,7 @@ export const QnaSection: React.FC<Props> = () => {
         <div className=" absolute bottom-[10%] right-[20%]  w-80 h-[60%] bg-red-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
       </div> */}
       <MaxWidthWrapper>
-        <div className="py-[100px] flex flex-col relative">
+        <div className="py-[50px] flex flex-col relative">
           <div className="text-center flex flex-col gap-4  mb-6 md:mb-10">
             <h2 className="text-heading ">{qnaContent.title}</h2>
             <p className="text-subheading mx-auto">{qnaContent.description}</p>

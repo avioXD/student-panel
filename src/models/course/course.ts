@@ -21,7 +21,7 @@ export const getCourses = cache(async () => {
     "https://f5dfjtfybg.execute-api.ap-south-1.amazonaws.com/default/courses_v1"
   );
 
-  const data = await response.json();
+  const data: CourseModel[] = await response.json();
   return data;
 });
 

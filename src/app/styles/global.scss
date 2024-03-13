@@ -92,6 +92,10 @@
         background: linear-gradient(91deg, #0dfac3 2.98%, #ffd900 95.16%);
     }
 
+    .text-title {
+        @apply text-4xl;
+    }
+
     .text-heading {
         @apply text-3xl font-normal;
     }
