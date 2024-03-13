@@ -3,6 +3,7 @@ import { heroContent } from "./content";
 import { GradientText } from "@/components/ui/typography/gradient-text";
 import { Button } from "@/components/ui/button";
 import Image from "@/components/ui/image";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -30,7 +31,9 @@ export const HeroSection = () => {
               </div>
             </div>
             <div className="mx-auto md:mx-0 ">
-              <Button>Explore Program</Button>
+              <Link href="all-programs">
+                <Button>Explore Program</Button>
+              </Link>
             </div>
           </div>
           <div className="px-1 relative md:mx-6 xl:mx-10 ">

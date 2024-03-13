@@ -37,7 +37,7 @@ export const CategorySection = () => {
               </TabsList>
               <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 ">
                 {" "}
-                {coursesList.map((course) => (
+                {coursesList.map((course: any) => (
                   <TabsContent key={course.id} value={course.categoryId}>
                     <CourseCard data={course} />
                   </TabsContent>

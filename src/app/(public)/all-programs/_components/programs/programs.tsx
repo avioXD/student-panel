@@ -22,7 +22,7 @@ const Programs: React.FC = async () => {
                     <CourseCard
                       data={course}
                       variant="dark"
-                      className="bg-white shadow-md"
+                      className="bg-white shadow"
                     />
                   </div>
                 ))}
@@ -40,7 +40,7 @@ const Programs: React.FC = async () => {
                     <CourseCard
                       data={course}
                       variant="dark"
-                      className="bg-white shadow-md"
+                      className="bg-white shadow"
                     />
                   </div>
                 ))}
