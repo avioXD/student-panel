@@ -49,7 +49,6 @@ const LoginPage: React.FC<Props> = () => {
                       </Button>
                     </div>
                   </div>
-
                   <div className="flex gap-2 pt-4 items-center">
                     <div className="md:w-1/3 flex justify-end">
                       <div className="h-px bg-gray-400 w-full mr-2"></div>
@@ -62,7 +61,6 @@ const LoginPage: React.FC<Props> = () => {
                       <div className="h-px bg-gray-400 w-full mr-2"></div>
                     </div>
                   </div>
-
                   <div className="pt-2 gap-y-2 ">
                     <div className="w-full pb-3 ">
                       <Input type="tel" placeholder="Username/Email" />
@@ -70,22 +68,16 @@ const LoginPage: React.FC<Props> = () => {
                     <div className="w-full">
                       <PasswordInput placeholder="Password" />
                     </div>
+                  </div>{" "}
+                  <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
+                    <Link href="/forget-password"> Forget Password?</Link>
                   </div>
-
-                  <Link href="/forget-password">
-                    {" "}
-                    <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
-                      Forget Password?
-                    </div>
-                  </Link>
                   <Button className="w-full ">Login</Button>
                   <div className="text-dark flex justify-center py-5 text-sm">
                     Don’t have an account?{" "}
-                    <Link href="/register">
-                      <span className="text-sky-600 cursor-pointer pl-1">
-                        Register now
-                      </span>
-                    </Link>
+                    <span className="text-sky-600 cursor-pointer pl-1">
+                      <Link href="/register"> Register now</Link>
+                    </span>
                   </div>
                 </div>
               </div>

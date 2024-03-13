@@ -33,7 +33,7 @@ export const courses: CourseModel[] = [
     domain_id: "Cybersecurity",
     job_role_id: "1",
     description:
-      "Learn the fundamentals of cybersecurity and how it applies to the real world.",
+      "Explore Golang essentials: syntax, concurrency, and efficiency in this beginner-friendly course. Learn to develop scalable applications with one of the fastest-growing programming languages. 💻",
     duration: "3 months",
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?cybersecurity",
@@ -41,10 +41,131 @@ export const courses: CourseModel[] = [
     rating: 4.5,
     students: 100,
     metadata: {
-      language: "English",
-      subtitle: "Subtitle",
-      instructor: "Instructor",
-      skills: ["Skill 1", "Skill 2"],
+      program_overview:
+        "Join our Golang course and master the fundamentals of the language, including syntax and concurrency. Dive into practical exercises to develop efficient, scalable applications. Whether you're a beginner or seasoned developer, our comprehensive curriculum will elevate your Golang skills. Explore the power of Golang in building robust software solutions. Enroll now to start your journey towards becoming a proficient Golang developer. Learn more...",
+      why_learn: {
+        title: "Why Should You Learn Golang?",
+        content: `Uncover Golang's efficiency with its concurrency model, clean syntax, and fast compilation. Leverage its robust standard library and cross-platform support. Equip yourself with essential tools like GoLand, Go Modules, Delve, Ginkgo & Gomega, and Docker for seamless development, dependency management, debugging, testing, and deployment. Embrace Golang's versatility for scalable and efficient applications.`,
+      },
+      tools: {
+        title: "Tools to Master",
+        content: ["GoLand", "Go Modules", "Delve", "Ginkgo & Gomega", "Docker"],
+      },
+      curriculum: {
+        title: "Course Curriculum",
+        content: [
+          {
+            title: "001. Introduction to Golang",
+            content: [
+              {
+                type: "video",
+                label: "Setting Up Golang Environment (14 mins)",
+                preview: "https://www.youtube.com/watch?v=3l4nVByCL44",
+              },
+              {
+                type: "video",
+                label: "Golang Syntax (07 mins)",
+                preview: "https://www.youtube.com/watch?v=3l4nVByCL44",
+              },
+              {
+                type: "document",
+                label: "Golang Concurrency",
+              },
+              {
+                type: "lab",
+                label: "Lab introduction",
+              },
+              {
+                type: "resource",
+                label: "Resource",
+              },
+              {
+                type: "quiz",
+                label: "Quiz",
+              },
+              {
+                type: "assignment",
+                label: "Assignment",
+              },
+            ],
+          },
+          {
+            title: "002. Intermediate Golang",
+            content: [
+              {
+                type: "video",
+                label: "Golang Packages",
+              },
+              {
+                type: "document",
+                label: "Error Handling in Golang",
+              },
+              {
+                type: "lab",
+                label: "Lab exercises",
+              },
+              {
+                type: "resource",
+                label: "Additional resources",
+              },
+              {
+                type: "quiz",
+                label: "Quiz",
+              },
+            ],
+          },
+          {
+            title: "003. Advanced Golang",
+            content: [
+              {
+                type: "video",
+                label: "Golang Concurrency Patterns",
+              },
+              {
+                type: "document",
+                label: "Golang Reflection",
+              },
+              {
+                type: "lab",
+                label: "Lab exercises",
+              },
+              {
+                type: "resource",
+                label: "Additional resources",
+              },
+              {
+                type: "quiz",
+                label: "Quiz",
+              },
+            ],
+          },
+          {
+            title: "004. Golang Web Development",
+            content: [
+              {
+                type: "video",
+                label: "Introduction to Web Development with Golang",
+              },
+              {
+                type: "document",
+                label: "Building RESTful APIs with Golang",
+              },
+              {
+                type: "lab",
+                label: "Lab exercises",
+              },
+              {
+                type: "resource",
+                label: "Additional resources",
+              },
+              {
+                type: "quiz",
+                label: "Quiz",
+              },
+            ],
+          },
+        ],
+      },
     },
   },
   {

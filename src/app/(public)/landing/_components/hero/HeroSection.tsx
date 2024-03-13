@@ -12,7 +12,7 @@ export const HeroSection = () => {
         <div className=" absolute bottom-[10%] left-[20%]  w-[400px] h-[400px] rotate-45 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-25 "></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-[100px] opacity-50 "></div>
       </div>
-      <MaxWidthWrapper className="relative py-auto">
+      <MaxWidthWrapper className="relative pt-16">
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 md:gap-8 items-center ">
           <div className="flex flex-col gap-4">
             <GradientText className="text-sm  mx-auto md:mx-0 ">
