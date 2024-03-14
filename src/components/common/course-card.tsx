@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const CourseCard: React.FC<Props> = ({
-  data: { image, title },
+  data: { image, title, id },
   className,
   variant = "default",
 }) => {
@@ -42,7 +42,7 @@ export const CourseCard: React.FC<Props> = ({
         <div className={text}>
           <p className="text-md mb-4 font-medium">{title}</p>
           <Link
-            href={"/"}
+            href={`/course/${id}`}
             className="text-xs flex gap-x-2 no-underline  text-decoration-line: hover:underline"
           >
             <CornerDownRight size={15} />

@@ -13,6 +13,7 @@ export interface CourseModel {
   program_type: string;
   rating: number;
   students: number;
+  paid: boolean;
   metadata: any;
 }
 
@@ -40,6 +41,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.5,
     students: 100,
+    paid: true,
     metadata: {
       program_overview:
         "Join our Golang course and master the fundamentals of the language, including syntax and concurrency. Dive into practical exercises to develop efficient, scalable applications. Whether you're a beginner or seasoned developer, our comprehensive curriculum will elevate your Golang skills. Explore the power of Golang in building robust software solutions. Enroll now to start your journey towards becoming a proficient Golang developer. Learn more...",
@@ -84,7 +86,7 @@ export const courses: CourseModel[] = [
                 label: "Quiz",
               },
               {
-                type: "assignment",
+                type: "lab",
                 label: "Assignment",
               },
             ],
@@ -182,6 +184,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.8,
     students: 200,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -203,6 +206,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.9,
     students: 300,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -224,6 +228,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.2,
     students: 50,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -245,6 +250,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.7,
     students: 80,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -266,6 +272,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.4,
     students: 60,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -287,6 +294,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.6,
     students: 70,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -308,6 +316,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.3,
     students: 70,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -329,6 +338,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.5,
     students: 80,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -350,6 +360,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.8,
     students: 100,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -371,6 +382,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.2,
     students: 60,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -392,6 +404,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.6,
     students: 80,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -413,6 +426,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.4,
     students: 70,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -434,6 +448,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.7,
     students: 50,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -455,6 +470,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.3,
     students: 60,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -476,6 +492,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.5,
     students: 80,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -497,6 +514,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.2,
     students: 70,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -518,6 +536,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.6,
     students: 90,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -539,6 +558,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.4,
     students: 80,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",
@@ -560,6 +580,7 @@ export const courses: CourseModel[] = [
     program_type: "Online",
     rating: 4.7,
     students: 100,
+    paid: true,
     metadata: {
       language: "English",
       subtitle: "Subtitle",

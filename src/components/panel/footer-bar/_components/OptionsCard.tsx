@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FooterSectionProps } from "../content";
 
 interface Props {
@@ -13,9 +14,14 @@ export const FooterOptionsCard: React.FC<Props> = ({
       <ul className="flex flex-col gap-2 ">
         {options.map((option) => (
           <li key={option.id} className="text-sm mb-1">
-            <a href={option.link} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={option.link}
+              target="_blank"
+              rel="noopener noreferrer  "
+              className="hover:underline underline-offset-1"
+            >
               {option.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

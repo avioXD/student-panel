@@ -15,7 +15,7 @@ export default function Layout({ children, className }: Props) {
       <Navbar />
       <div>
         <Suspense fallback={<LoadingScreen />}>
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen overflow-x-clip">{children}</main>
         </Suspense>
       </div>
 
