@@ -78,9 +78,12 @@ const CourseCurriculum: React.FC<Props> = ({ course: { metadata } }) => {
                                         className="flex items-center gap-2 text-gray-800"
                                       >
                                         <div>
-                                          {icons.map((icon) =>
+                                          {icons.map((icon, index) =>
                                             icon.key === item?.type ? (
-                                              <icon.IconEle size={20} />
+                                              <icon.IconEle
+                                                size={20}
+                                                key={index}
+                                              />
                                             ) : null
                                           )}
                                         </div>

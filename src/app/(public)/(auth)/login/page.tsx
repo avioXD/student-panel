@@ -34,7 +34,11 @@ const LoginPage: React.FC<Props> = () => {
                         variant={"outline"}
                         className="gap-x-2 flex w-full   "
                       >
-                        <Image src="/assets/icons/google.svg" width={22} />
+                        <Image
+                          src="/assets/icons/google.svg"
+                          width={22}
+                          alt="google"
+                        />
                         Login With Google
                       </Button>
                     </div>
@@ -44,7 +48,11 @@ const LoginPage: React.FC<Props> = () => {
                         variant={"outline"}
                         className="gap-x-2 flex  w-full   "
                       >
-                        <Image src="/assets/icons/github.svg" width={22} />
+                        <Image
+                          src="/assets/icons/github.svg"
+                          width={22}
+                          alt="github"
+                        />
                         Login With GitHub
                       </Button>
                     </div>
