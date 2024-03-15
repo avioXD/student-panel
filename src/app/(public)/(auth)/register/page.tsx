@@ -24,11 +24,10 @@ const RegisterPage: React.FC<Props> = () => {
                 Unlock a world of knowledge and begin your learning journey by
                 creating your account
               </div>
-
               <div className="justify-center align-middle flex items-center  pt-5">
                 <div className="block mx-auto md:max-w-[600px] lg:max-w-[500px] w-full 3xl:!max-w-[655px] px-8 py-5 bg-white shadow-2xl rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
                   <div className="grid grid-cols-1 md:grid-cols-2 w-100 gap-2 pt-3">
-                    <div className="cursor-pointer ">
+                    <div className="cursor-pointer">
                       <Button
                         size={"sm"}
                         variant={"outline"}

@@ -1,3 +1,5 @@
+"use client";
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Image from "@/components/ui/image";
@@ -80,7 +82,9 @@ const LoginPage: React.FC<Props> = () => {
                   <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
                     <Link href="/forget-password"> Forget Password?</Link>
                   </div>
-                  <Button className="w-full ">Login</Button>
+                  <Button className="w-full">
+                    <Link href="/learner">Login</Link>
+                  </Button>
                   <div className="text-dark flex justify-center py-5 text-sm">
                     Don’t have an account?{" "}
                     <span className="text-sky-600 cursor-pointer pl-1">
