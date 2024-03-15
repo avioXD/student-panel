@@ -82,8 +82,23 @@ const LoginPage: React.FC<Props> = () => {
                   <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
                     <Link href="/forget-password"> Forget Password?</Link>
                   </div>
-                  <Button className="w-full">
-                    <Link href="/learner">Login</Link>
+                  <Button
+                    className="w-full"
+                    onClick={() => {
+                      "use client";
+                      fetch("/api/login", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          username: "admin",
+                          password: "admin",
+                        }),
+                      });
+                    }}
+                  >
+                    Login
                   </Button>
                   <div className="text-dark flex justify-center py-5 text-sm">
                     Don’t have an account?{" "}

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 
 const Page = async ({}) => {
   const user = await auth();
+  ("use server");
   if (user.id) {
     return redirect("/learner/" + user.id);
   } else redirect("/login");

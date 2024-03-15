@@ -5,6 +5,7 @@ import "@/app/styles/global.css";
 import { cn } from "@/lib/utils";
 
 import { Toaster } from "@/components/ui/sonner";
+import Layout from "@/components/Layout";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,22 +23,5 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="scroll-smooth ease-in-out"
-    >
-      <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased relative",
-          fontSans.variable
-        )}
-      >
-        <div>{children}</div>
-        <Toaster position="bottom-right" />
-      </body>
-    </html>
-  );
+  return <Layout>{children}</Layout>;
 }

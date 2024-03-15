@@ -21,23 +21,6 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="scroll-smooth ease-in-out"
-    >
-      <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased relative",
-          fontSans.variable
-        )}
-      >
-        <div>{children}</div>
-        <Toaster position="bottom-right" />
-      </body>
-    </html>
-  );
+export default function Layout({ children }: RootLayoutProps) {
+  return <main>{children}</main>;
 }

@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout";
 import { HeroSection } from "./_components/hero/hero-section";
 import Programs from "./_components/programs/programs";
 import { ExploreExperience } from "../landing/_components/explore-experience/ExploreExperience";
@@ -9,7 +8,7 @@ import { QnaSection } from "../landing/_components/qna/QnaSection";
 
 const Page: React.FC<any> = () => {
   return (
-    <Layout>
+    <div>
       <HeroSection />
       <Programs />
       <ExploreExperience />
@@ -17,7 +16,7 @@ const Page: React.FC<any> = () => {
       <TestimonialSection />
       <UnlockAccessSection />
       <QnaSection />
-    </Layout>
+    </div>
   );
 };
 

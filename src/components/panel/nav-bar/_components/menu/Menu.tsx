@@ -13,7 +13,7 @@ export const Menu: React.FC<any> = () => {
           <li
             key={index}
             className={cn("mx-4", {
-              "text-blue-500 font-medium": pathname === option.path,
+              "text-blue-500 font-medium": pathname === option.matcher,
             })}
           >
             <a href={option.path}>{option.name}</a>

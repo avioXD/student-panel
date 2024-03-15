@@ -16,7 +16,7 @@ const imageLoader = ({ src, width, quality }: imageLoaderProps) => {
 };
 
 const Image: React.FC<ImageProps> = (props) => {
-  return <img className={cn(props.className)} {...props} fill={true} />;
+  return <img className={cn(props.className)} {...props} />;
 };
 
 export default Image;
