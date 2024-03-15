@@ -1,7 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { cookies } from "next/headers";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest) {
   // Handle the POST request here
   // You can access the request body using req.body
 
@@ -11,10 +10,12 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     name: "admin",
     email: "admin@gmail.com",
   };
-  // Example: Get the data from the request body
-  // Example: Perform some logic with the data
-  const cookieStore = cookies();
-  cookieStore.set("user", JSON.stringify(user));
-  console.log("User is set in the cookie");
-  return new Response("User is set in the cookie");
+
+  let token = "";
+  let response = NextResponse.json({ user, token });
+  response.cookies.set("token", token, {
+    httpOnly: true,
+    maxAge: 60 * 60 * 24 * 7,
+  });
+  return response;
 }
