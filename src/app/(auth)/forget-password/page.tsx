@@ -1,7 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import Image from "@/components/ui/image";
-import { Input, PasswordInput } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 interface Props {}
 
 const Page: React.FC<Props> = () => {

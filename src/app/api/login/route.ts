@@ -1,21 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   // Handle the POST request here
   // You can access the request body using req.body
+  const { username, password } = await req.json();
 
-  let user = {
-    id: 1,
-    role: "admin",
-    name: "admin",
-    email: "admin@gmail.com",
-  };
-
-  let token = "";
-  let response = NextResponse.json({ user, token });
-  response.cookies.set("token", token, {
-    httpOnly: true,
-    maxAge: 60 * 60 * 24 * 7,
+  return await fetch("http://127.0.0.1:4000/api/auth/login", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      password,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
   });
-  return response;
 }

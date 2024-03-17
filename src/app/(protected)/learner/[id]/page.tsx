@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 
 const Page: React.FC<any> = ({ params }) => {
   const { id } = params;
+
   return (
     <Layout>
       <h1>Protected Learner Page</h1>

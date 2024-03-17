@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Raleway as FontSans } from "next/font/google";
 import "@/app/styles/global.css";
 
-import { cn } from "@/lib/utils";
-
-import { Toaster } from "@/components/ui/sonner";
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",

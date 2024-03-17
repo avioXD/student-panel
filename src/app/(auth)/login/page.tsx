@@ -5,9 +5,20 @@ import { Button } from "@/components/ui/button";
 import Image from "@/components/ui/image";
 import { Input, PasswordInput } from "@/components/ui/input";
 import Link from "next/link";
+import { login } from "./controller";
+import { useRouter } from "next/navigation";
 interface Props {}
-
 const LoginPage: React.FC<Props> = () => {
+  const router = useRouter();
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data: any = await login(formData);
+    if (data.isAuthorized) {
+      router.push("/learner/" + data.token);
+    }
+  };
+
   // Your code here
   return (
     <section className="bg-white h-screen   ">
@@ -71,35 +82,26 @@ const LoginPage: React.FC<Props> = () => {
                       <div className="h-px bg-gray-400 w-full mr-2"></div>
                     </div>
                   </div>
-                  <div className="pt-2 gap-y-2 ">
-                    <div className="w-full pb-3 ">
-                      <Input type="tel" placeholder="Username/Email" />
+                  <form onSubmit={onSubmit}>
+                    <div className="pt-2 gap-y-2 ">
+                      <div className="w-full pb-3 ">
+                        <Input
+                          type="tel"
+                          placeholder="Username/Email"
+                          name="username"
+                        />
+                      </div>
+                      <div className="w-full">
+                        <PasswordInput placeholder="Password" name="password" />
+                      </div>
+                    </div>{" "}
+                    <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
+                      <Link href="/forget-password"> Forget Password?</Link>
                     </div>
-                    <div className="w-full">
-                      <PasswordInput placeholder="Password" />
-                    </div>
-                  </div>{" "}
-                  <div className="text-dark flex justify-end py-5 cursor-pointer text-sm">
-                    <Link href="/forget-password"> Forget Password?</Link>
-                  </div>
-                  <Button
-                    className="w-full"
-                    onClick={() => {
-                      "use client";
-                      fetch("/api/login", {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                          username: "admin",
-                          password: "admin",
-                        }),
-                      });
-                    }}
-                  >
-                    Login
-                  </Button>
+                    <Button className="w-full" type="submit">
+                      Login
+                    </Button>
+                  </form>
                   <div className="text-dark flex justify-center py-5 text-sm">
                     Don’t have an account?{" "}
                     <span className="text-sky-600 cursor-pointer pl-1">

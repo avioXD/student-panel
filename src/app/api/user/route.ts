@@ -8,13 +8,14 @@ export const dynamic = "force-dynamic";
  */
 export async function GET(request: NextRequest) {
   try {
-    const token = request.cookies.get("token");
-
     let user: any = {};
-    user = await axios.get(
-      "https://randomapi.com/api/y1lfp11q?key=LEIX-GF3O-AG7I-6J84"
-    );
-    user = user.data.results[0];
+    user = {
+      id: 1,
+      username: "admin",
+      email: "any@gmail.com",
+      role: "admin",
+      isAuthorized: true,
+    };
     let response = NextResponse.json(user);
     if (user) return response;
   } catch (error) {
