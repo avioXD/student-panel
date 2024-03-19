@@ -7,7 +7,7 @@ export interface CourseModel {
   domain_id: string;
   job_role_id: string;
   description: string;
-  duration: string;
+  duration: number;
   level: string;
   image: string;
   program_type: string;
@@ -23,7 +23,7 @@ export const getCourses = cache(async () => {
   );
 
   const data: CourseModel[] = await response.json();
-  return data;
+  return courses;
 });
 
 export const courses: CourseModel[] = [
@@ -35,7 +35,7 @@ export const courses: CourseModel[] = [
     job_role_id: "1",
     description:
       "Explore Golang essentials: syntax, concurrency, and efficiency in this beginner-friendly course. Learn to develop scalable applications with one of the fastest-growing programming languages. 💻",
-    duration: "3 months",
+    duration: 3,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?cybersecurity",
     program_type: "Online",
@@ -178,7 +178,7 @@ export const courses: CourseModel[] = [
     job_role_id: "2",
     description:
       "Learn how to design and deploy scalable, highly available, and fault-tolerant systems on AWS.",
-    duration: "6 months",
+    duration: 6,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?cloud-computing",
     program_type: "Online",
@@ -200,7 +200,7 @@ export const courses: CourseModel[] = [
     job_role_id: "3",
     description:
       "Learn how to analyze and visualize data, build predictive models, and communicate insights.",
-    duration: "9 months",
+    duration: 9,
     level: "Advanced",
     image: "https://source.unsplash.com/300x200/?data-science",
     program_type: "Online",
@@ -222,7 +222,7 @@ export const courses: CourseModel[] = [
     job_role_id: "1",
     description:
       "Learn the basics of cybersecurity and how to protect yourself online.",
-    duration: "1 month",
+    duration: 1,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?cybersecurity",
     program_type: "Online",
@@ -244,7 +244,7 @@ export const courses: CourseModel[] = [
     job_role_id: "1",
     description:
       "Take your cybersecurity skills to the next level with advanced techniques and strategies.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?cybersecurity",
     program_type: "Online",
@@ -266,7 +266,7 @@ export const courses: CourseModel[] = [
     job_role_id: "1",
     description:
       "Learn the basics of network security and how to secure computer networks.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?networking",
     program_type: "Online",
@@ -288,7 +288,7 @@ export const courses: CourseModel[] = [
     job_role_id: "1",
     description:
       "Take your networking skills to the next level with advanced techniques and protocols.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?networking",
     program_type: "Online",
@@ -310,7 +310,7 @@ export const courses: CourseModel[] = [
     job_role_id: "4",
     description:
       "Learn the basics of artificial intelligence and its applications in various industries.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?artificial-intelligence",
     program_type: "Online",
@@ -332,7 +332,7 @@ export const courses: CourseModel[] = [
     job_role_id: "4",
     description:
       "Learn the basics of machine learning and how to build predictive models.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?machine-learning",
     program_type: "Online",
@@ -354,7 +354,7 @@ export const courses: CourseModel[] = [
     job_role_id: "4",
     description:
       "Dive deep into the world of deep learning and neural networks.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?deep-learning",
     program_type: "Online",
@@ -376,7 +376,7 @@ export const courses: CourseModel[] = [
     job_role_id: "5",
     description:
       "Learn the basics of web development and build your own websites.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?web-development",
     program_type: "Online",
@@ -398,7 +398,7 @@ export const courses: CourseModel[] = [
     job_role_id: "5",
     description:
       "Take your web development skills to the next level with advanced techniques and frameworks.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?web-development",
     program_type: "Online",
@@ -420,7 +420,7 @@ export const courses: CourseModel[] = [
     job_role_id: "4",
     description:
       "Get started with machine learning and learn how to apply it to real-world problems.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?machine-learning",
     program_type: "Online",
@@ -442,7 +442,7 @@ export const courses: CourseModel[] = [
     job_role_id: "4",
     description:
       "Explore the ethical considerations and implications of artificial intelligence.",
-    duration: "1 month",
+    duration: 1,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?artificial-intelligence",
     program_type: "Online",
@@ -464,7 +464,7 @@ export const courses: CourseModel[] = [
     job_role_id: "5",
     description:
       "Learn the basics of web design and create visually appealing websites.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?web-design",
     program_type: "Online",
@@ -486,7 +486,7 @@ export const courses: CourseModel[] = [
     job_role_id: "5",
     description:
       "Take your web design skills to the next level with advanced techniques and tools.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?web-design",
     program_type: "Online",
@@ -508,7 +508,7 @@ export const courses: CourseModel[] = [
     job_role_id: "2",
     description:
       "Learn the basics of computer networking and how data is transmitted over networks.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?networking",
     program_type: "Online",
@@ -530,7 +530,7 @@ export const courses: CourseModel[] = [
     job_role_id: "2",
     description:
       "Learn how to secure computer networks and protect against cyber threats.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?networking",
     program_type: "Online",
@@ -552,7 +552,7 @@ export const courses: CourseModel[] = [
     job_role_id: "3",
     description:
       "Get started with data science and learn how to analyze and interpret data.",
-    duration: "2 months",
+    duration: 2,
     level: "Beginner",
     image: "https://source.unsplash.com/300x200/?data-science",
     program_type: "Online",
@@ -574,7 +574,7 @@ export const courses: CourseModel[] = [
     job_role_id: "3",
     description:
       "Take your data science skills to the next level with advanced techniques and algorithms.",
-    duration: "3 months",
+    duration: 3,
     level: "Intermediate",
     image: "https://source.unsplash.com/300x200/?data-science",
     program_type: "Online",
