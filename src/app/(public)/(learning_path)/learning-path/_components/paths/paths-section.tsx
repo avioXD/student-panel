@@ -13,9 +13,9 @@ const PathsSection: React.FC<any> = async () => {
     <div>
       <section className="bg-black rounded-t-2xl relative">
         <div className="absolute backdrop-blur-sm left-0 right-0 top-20 bottom-0">
-          <div className=" absolute top-[10%] left-[30%]  w-[400px] h-[400px] rotate-45 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 "></div>
-          <div className=" absolute top-[10%] left-[60%]  w-[400px] h-[400px] rotate-45 bg-green-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-10 "></div>
-          <div className=" absolute bottom-[10%] right-[40%]  w-80 h-[60%] bg-blue-800 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 "></div>
+          <div className=" absolute top-[2%] left-[30%]  w-[400px] h-[400px] rotate-45 bg-yellow-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-10 "></div>
+          <div className=" absolute top-[15%] left-[50%]  w-[400px] h-[400px] rotate-45 bg-green-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-10 "></div>
+          <div className=" absolute top-[50%] bottom-[10%] right-[30%]  w-[800px] h-[60%] bg-blue-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-10 "></div>
         </div>
         <MaxWidthWrapper className="relative">
         <div>

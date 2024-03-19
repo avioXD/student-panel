@@ -73,12 +73,25 @@ const RegisterPage: React.FC<Props> = () => {
                   <div className="pt-2 gap-y-2 ">
                     <div className="w-full pb-3 ">
                       <Input
-                        type="tel"
-                        placeholder="Phone Number/Email Address"
+                        type="text"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div className="w-full pb-3 ">
+                      <Input
+                        type="number"
+                        placeholder="Phone Number"
+                        
+                      />
+                    </div>
+                    <div className="w-full pb-3 ">
+                      <Input
+                        type="email"
+                        placeholder="Email Address"
                       />
                     </div>
                     <div className="w-full">
-                      <PasswordInput placeholder="Password" />
+                      <PasswordInput type="password" placeholder="Create Password" />
                     </div>
                   </div>
 
