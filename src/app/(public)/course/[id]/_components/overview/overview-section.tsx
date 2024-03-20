@@ -18,14 +18,17 @@ const OverviewSection: React.FC<Props> = ({ course: { metadata } }) => {
                   <p className="text-subheading">{metadata.program_overview}</p>
                 </div>
               </div>
-              <div className="w-full">
-                <div>
+              <div className="flex flex-col">
+                <div className="flex flex-col ">
                   <h2 className="text-heading mb-4">
                     {metadata?.why_learn.title || "Why Learn?"}
                   </h2>
-                  <p className="text-md max-w-screen-lg">
-                    {metadata?.why_learn.content || "No content available"}
-                  </p>
+                  <div className="grid md:grid-cols-2">
+                    <p className="text-md max-w-screen-lg">
+                      {metadata?.why_learn.content || "No content available"}
+                    </p>
+                  </div>
+                  
                 </div>
               </div>
               <div className="w-full">
