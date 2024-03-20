@@ -50,7 +50,7 @@ const CourseCurriculum: React.FC<Props> = ({ course: { metadata } }) => {
   return (
     <div className="bg-gradient-to-b from-slate-100 to-white  pb-14">
       <MaxWidthWrapper className="overflow-x-hidden">
-        <div className="shadow-[0px_0px_20px_0px_rgba(0,0,0,0.1)] rounded-xl p-10 mb-10 py-10 w-full bg-white">
+        <div className="shadow-[0px_0px_20px_0px_rgba(0,0,0,0.1)] rounded-xl p-10 py-14 w-full bg-white">
           <div className="flex flex-col gap-10">
             <div>
               <h2 className="text-heading mb-4">
