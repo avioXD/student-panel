@@ -17,14 +17,13 @@ export interface CourseModel {
   metadata: any;
 }
 
-export const getCourses = cache(async () => {
-  const response = await fetch(
-    "https://f5dfjtfybg.execute-api.ap-south-1.amazonaws.com/default/courses_v1"
-  );
+// export const getCourses = cache(async () => {
+//   return [];
+// });
 
-  const data: CourseModel[] = await response.json();
-  return courses;
-});
+export const getCourses = async () => {
+  return [];
+};
 
 export const courses: CourseModel[] = [
   {
@@ -37,7 +36,8 @@ export const courses: CourseModel[] = [
       "Explore Golang essentials: syntax, concurrency, and efficiency in this beginner-friendly course. Learn to develop scalable applications with one of the fastest-growing programming languages. 💻",
     duration: 3,
     level: "Beginner",
-    image: "https://source.unsplash.com/300x200/?cybersecurity",
+    image:
+      "https://i1.wp.com/itnews.blog.fordham.edu/wp-content/uploads/2016/11/AdobeStock_67901546-2.jpg",
     program_type: "Online",
     rating: 4.5,
     students: 100,
@@ -180,7 +180,8 @@ export const courses: CourseModel[] = [
       "Learn how to design and deploy scalable, highly available, and fault-tolerant systems on AWS.",
     duration: 6,
     level: "Intermediate",
-    image: "https://source.unsplash.com/300x200/?cloud-computing",
+    image:
+      "https://th.bing.com/th/id/OIP.W9xeEQDheQIrIEi-95qzhwHaE8?rs=1&pid=ImgDetMain",
     program_type: "Online",
     rating: 4.8,
     students: 200,
@@ -246,7 +247,8 @@ export const courses: CourseModel[] = [
       "Take your cybersecurity skills to the next level with advanced techniques and strategies.",
     duration: 3,
     level: "Intermediate",
-    image: "https://source.unsplash.com/300x200/?cybersecurity",
+    image:
+      "https://th.bing.com/th/id/OIP.W9xeEQDheQIrIEi-95qzhwHaE8?rs=1&pid=ImgDetMain",
     program_type: "Online",
     rating: 4.7,
     students: 80,
@@ -268,7 +270,8 @@ export const courses: CourseModel[] = [
       "Learn the basics of network security and how to secure computer networks.",
     duration: 2,
     level: "Beginner",
-    image: "https://source.unsplash.com/300x200/?networking",
+    image:
+      "https://th.bing.com/th/id/OIP.W9xeEQDheQIrIEi-95qzhwHaE8?rs=1&pid=ImgDetMain",
     program_type: "Online",
     rating: 4.4,
     students: 60,

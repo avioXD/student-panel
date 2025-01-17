@@ -51,7 +51,8 @@ export const coursesList: CourseCardProps[] = [
     id: "1",
     categoryId: "1",
     title: "Cybersecurity Essentials",
-    image: "https://source.unsplash.com/300x200/?cybersecurity",
+    image:
+      "https://i1.wp.com/itnews.blog.fordham.edu/wp-content/uploads/2016/11/AdobeStock_67901546-2.jpg",
     description:
       "Learn the fundamentals of cybersecurity and how it applies to the real world.",
     link: "Link",
@@ -60,7 +61,8 @@ export const coursesList: CourseCardProps[] = [
     id: "2",
     categoryId: "1",
     title: "Network Security Fundamentals",
-    image: "https://source.unsplash.com/300x200/?networksecurity",
+    image:
+      "https://i1.wp.com/itnews.blog.fordham.edu/wp-content/uploads/2016/11/AdobeStock_67901546-2.jpg",
     description:
       "Explore the basics of securing computer networks and systems.",
     link: "Link",
@@ -69,7 +71,8 @@ export const coursesList: CourseCardProps[] = [
     id: "3",
     categoryId: "1",
     title: "Ethical Hacking",
-    image: "https://source.unsplash.com/300x200/?ethicalhacking",
+    image:
+      "https://i1.wp.com/itnews.blog.fordham.edu/wp-content/uploads/2016/11/AdobeStock_67901546-2.jpg",
     description:
       "Master the techniques used by ethical hackers to secure systems.",
     link: "Link",
